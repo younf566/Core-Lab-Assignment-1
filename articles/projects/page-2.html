@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Controlled Feed</title>
+    <link rel="stylesheet" href="../../styles/global.css">
+</head>
+<body class="feed-page">
+    <div id="invertedcursor"></div>
+    <a href="../../index.html" class="house-home-link">
+        <img src="../../images/AdobeStock_1588623283.png" class="house-top-left">
+    </a>
+    <header class="feed-header">
+        <h1>Pick your poison</h1>
+    </header>
+    <div class="feed-flex-container">
+        <section class="mood-controls" aria-label="Mood sliders">
+            <div class="mood-control">
+                <div class="mood-control__labels">
+                    <label for="mood-happy">Are you Happy?</label>
+                    <span class="mood-value" id="mood-happy-value" aria-live="polite">60</span>
+                </div>
+                <input type="range" id="mood-happy" class="mood-slider" min="0" max="100" value="60" data-trait="happy">
+                <p class="mood-control__hint">Craving joy</p>
+            </div>
+            <div class="mood-control">
+                <div class="mood-control__labels">
+                    <label for="mood-energy">Are you anxious?</label>
+                    <span class="mood-value" id="mood-energy-value" aria-live="polite">45</span>
+                </div>
+                <input type="range" id="mood-energy" class="mood-slider" min="0" max="100" value="45" data-trait="energy">
+                <p class="mood-control__hint">Stress levels.</p>
+            </div>
+            <div class="mood-control">
+                <div class="mood-control__labels">
+                    <label for="mood-curiosity">Just need to doom scroll?</label>
+                    <span class="mood-value" id="mood-curiosity-value" aria-live="polite">55</span>
+                </div>
+                <input type="range" id="mood-rotting" class="mood-slider" min="0" max="100" value="55" data-trait="curiosity">
+                <p class="mood-control__hint">Rotting in bed</p>
+            </div>
+            <p class="mood-summary" id="mood-summary" aria-live="polite">This is your feed</p>
+        </section>
+        <section class="mood-feed" id="mood-feed" aria-live="polite">
+        <article class="feed-card" data-happy="85" data-energy="40" data-curiosity="30">
+            <header class="feed-card__header">
+                <img src="../../images/AdobeStock_607016500.png" alt="Avatar with a sunrise icon" class="feed-card__avatar">
+                <div>
+                    <p class="feed-card__user">@sunrise.studio</p>
+                    <p class="feed-card__headline">Waking up grateful</p>
+                </div>
+                <span class="feed-card__match" aria-hidden="true">Vibe match 0%</span>
+            </header>
+            <img src="../../images/AdobeStock_614627155.png" alt="A person stretching toward a bright sunrise" class="feed-card__image">
+            <div class="feed-card__caption">
+                <p>Morning rays, warm tea, and a journaling session to set intentions. Feeling light and thankful for the little things.</p>
+            </div>
+            <div class="feed-card__actions" aria-hidden="true">
+                <span>❤️</span>
+                <span>💬</span>
+                <span>🔖</span>
+            </div>
+        </article>
+
+        <article class="feed-card" data-happy="40" data-energy="25" data-curiosity="60">
+            <header class="feed-card__header">
+                <img src="../../images/AdobeStock_430310354.jpeg" alt="Avatar with abstract shapes" class="feed-card__avatar">
+                <div>
+                    <p class="feed-card__user">@deepdives</p>
+                    <p class="feed-card__headline">Long reads for rainy days</p>
+                </div>
+                <span class="feed-card__match" aria-hidden="true">Vibe match 0%</span>
+            </header>
+            <img src="../../images/AdobeStock_305040452.jpeg" alt="A cosy window seat with a book and coffee" class="feed-card__image">
+            <div class="feed-card__caption">
+                <p>Settling in with a thought-provoking essay and slow brew. Perfect company for introspection and curiosity.</p>
+            </div>
+            <div class="feed-card__actions" aria-hidden="true">
+                <span>🤍</span>
+                <span>💬</span>
+                <span>🔖</span>
+            </div>
+        </article>
+
+        <article class="feed-card" data-happy="70" data-energy="80" data-curiosity="65">
+            <header class="feed-card__header">
+                <img src="../../images/AdobeStock_652238471.png" alt="Avatar of a runner" class="feed-card__avatar">
+                <div>
+                    <p class="feed-card__user">@go.run.go</p>
+                    <p class="feed-card__headline">Sunset sprint club</p>
+                </div>
+                <span class="feed-card__match" aria-hidden="true">Vibe match 0%</span>
+            </header>
+            <img src="../../images/AdobeStock_652238471.png" alt="Friends running together at sunset" class="feed-card__image">
+            <div class="feed-card__caption">
+                <p>We chased the golden hour, sprinted that last hill, and finished laughing. Ready for the next burst of energy?</p>
+            </div>
+            <div class="feed-card__actions" aria-hidden="true">
+                <span>❤️</span>
+                <span>💬</span>
+                <span>📤</span>
+            </div>
+        </article>
+
+        <article class="feed-card" data-happy="30" data-energy="35" data-curiosity="20">
+            <header class="feed-card__header">
+                <img src="../../images/AdobeStock_583253886.jpeg" alt="Avatar of calm water" class="feed-card__avatar">
+                <div>
+                    <p class="feed-card__user">@gentlewaves</p>
+                    <p class="feed-card__headline">Soothing soundscapes</p>
+                </div>
+                <span class="feed-card__match" aria-hidden="true">Vibe match 0%</span>
+            </header>
+            <img src="../../images/AdobeStock_583253886.jpeg" alt="Close-up of rippling water in soft light" class="feed-card__image">
+            <div class="feed-card__caption">
+                <p>Press play on tonight's ambient mix and let the ripples of sound slow everything down.</p>
+            </div>
+            <div class="feed-card__actions" aria-hidden="true">
+                <span>🤍</span>
+                <span>💬</span>
+                <span>🔁</span>
+            </div>
+        </article>
+
+        <article class="feed-card" data-happy="55" data-energy="50" data-curiosity="80">
+            <header class="feed-card__header">
+                <img src="../../images/AdobeStock_430310354.jpeg" alt="Avatar of bold colours" class="feed-card__avatar">
+                <div>
+                    <p class="feed-card__user">@urbanexplorers</p>
+                    <p class="feed-card__headline">Hidden alley art</p>
+                </div>
+                <span class="feed-card__match" aria-hidden="true">Vibe match 0%</span>
+            </header>
+            <img src="../../images/AdobeStock_430310354.jpeg" alt="A colourful mural on a city alley wall" class="feed-card__image">
+            <div class="feed-card__caption">
+                <p>Every corner has a story. Today's discovery? A mural created overnight celebrating community voices.</p>
+            </div>
+            <div class="feed-card__actions" aria-hidden="true">
+                <span>❤️</span>
+                <span>💬</span>
+                <span>📌</span>
+            </div>
+        </article>
+
+        <article class="feed-card" data-happy="90" data-energy="55" data-curiosity="45">
+            <header class="feed-card__header">
+                <img src="../../images/AdobeStock_661920836.png" alt="Avatar of blooming flowers" class="feed-card__avatar">
+                <div>
+                    <p class="feed-card__user">@bloomroom</p>
+                    <p class="feed-card__headline">Petals &amp; playlists</p>
+                </div>
+                <span class="feed-card__match" aria-hidden="true">Vibe match 0%</span>
+            </header>
+            <img src="../../images/AdobeStock_1243286350.png" alt="A bouquet of flowers on a table" class="feed-card__image">
+            <div class="feed-card__caption">
+                <p>Matching today's bloom with a feel-good playlist. Bright colours, brighter moods.</p>
+            </div>
+            <div class="feed-card__actions" aria-hidden="true">
+                <span>🤍</span>
+                <span>💬</span>
+                <span>🔖</span>
+            </div>
+        </article>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../../scripts/java.js"></script>
+    <script src="../../scripts/feed.js"></script>
+</body>
+</html>
