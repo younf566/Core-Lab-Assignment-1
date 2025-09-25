@@ -17,18 +17,21 @@
         </div>
         <script>
             const grid = document.querySelector('.insta-grid');
-            // Exclamation mark in a 12x10 grid (116 posts)
-            // Vertical bar: col 5 (index 4, 16, 28, 40, 52, 64, 76, 88, 100)
-            // Dot: row 10, col 5 (index 112)
-            const specialIndices = [4, 16, 28, 40, 52, 64, 76, 88,  112,
-                                   5, 17, 29, 41, 53, 65, 77, 89,  113,
-                                   ,]; // double column for thickness
+            
+            // Randomly select 22 indices out of 116 to be special (no effects)
+            const specialIndices = new Set();
+            while(specialIndices.size < 22) {
+                specialIndices.add(Math.floor(Math.random() * 116));
+            }
+            
+            // Create 116 insta posts
             for(let i=0; i<116; i++) {
                 const div = document.createElement('div');
-                div.className = 'insta-post' + (specialIndices.includes(i) ? ' special' : '');
+                div.className = 'insta-post' + (specialIndices.has(i) ? ' no-effects' : '');
                 grid.appendChild(div);
             }
         </script>
+        <script src="../../scripts/grid-effects.js"></script>
         <script src="../../scripts/java.js"></script>
 </body>
 </html>

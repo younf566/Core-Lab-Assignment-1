@@ -9,13 +9,28 @@
 <div id="invertedcursor"></div>
     <div class="gallery-wrapper">
         <div class="gallery">
-            <img src="images/door_1.png">
-            <img src="images/door_2.png">
+            <img src="images/door_1.png" class="popup-door" data-door="1">
+            <img src="images/door_2.png" class="popup-door" data-door="2">
             <a href="articles/projects/page-2.html"><img src="images/door_3.png" alt="Door 3"></a>
             <a href="articles/projects/page-3.html"><img src="images/door_4.png" alt="Door 4"></a>
-            <img src="images/door_5.png">
-            <img src="images/door_6.png">
+            <img src="images/door_5.png" class="popup-door" data-door="5">
+            <img src="images/door_6.png" class="popup-door" data-door="6">
             <a href="articles/projects/page-2.html" class="page-link"></a>
+        </div>
+    </div>
+    
+    <!-- Popup Modal -->
+    <div id="research-popup" class="popup-overlay">
+        <div class="popup-container">
+            <button class="popup-close">&times;</button>
+            <div class="popup-content">
+                <div class="popup-header">
+                    <h2 id="popup-title">Research Insights</h2>
+                </div>
+                <div class="popup-body">
+                    <p id="popup-text"></p>
+                </div>
+            </div>
         </div>
     </div>
 <div>
@@ -27,5 +42,6 @@
     <script src="scripts/java.js"></script>
     <script src="scripts/door-hover.js"></script>
     <script src="scripts/typewriter.js"></script>
+    <script src="scripts/research-popup.js"></script>
 </body>
 </html>
